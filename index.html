@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Entregas</title>
+    <link rel="stylesheet" href="./Css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculadora de Lucro de Entregas</h1>
+
+        <div class="main-content">
+            <div class="input-section">
+
+                <div class="input-group">
+                    <label for="kmBusca">Quilometragem de Busca (km):</label>
+                    <input type="number" id="kmBusca" placeholder="Ex: 5">
+                </div>
+
+                <div class="input-group">
+                    <label for="kmEntrega">Quilometragem da Entrega (km):</label>
+                    <input type="number" id="kmEntrega" placeholder="Ex: 10">
+                </div>
+
+                <div class="input-group">
+                    <label for="valorEntrega">Valor Total da Entrega (R$):</label>
+                    <input type="number" id="valorEntrega" placeholder="Ex: 25.00">
+                </div>
+
+                <div class="input-group">
+                    <label for="kmLitroEtanol">Quilometragem por Litro de Etanol (km/L):</label>
+                    <input type="number" id="kmLitroEtanol" placeholder="Ex: 8">
+                </div>
+
+                <div class="input-group">
+                    <label for="precoEtanol">Preço do Litro do Etanol (R$):</label>
+                    <input type="number" id="precoEtanol" placeholder="Ex: 3.50">
+                </div>
+
+                <button onclick="calcular()">Calcular</button>
+            </div>
+
+            <div class="results-section" id="resultados">
+                <h2>Resultados</h2>
+                <p><strong>Custo com Combustível:</strong> R$ <span id="custoCombustivel">0.00</span></p>
+                <p><strong>Valor por km rodado (bruto):</strong> R$ <span id="valorKmRodado">0.00</span></p>
+                <p><strong>Gasto Total para a Entrega:</strong> R$ <span id="gastoTotal">0.00</span></p>
+                <p><strong>Lucro Líquido:</strong> R$ <span id="lucroLiquido">0.00</span></p>
+                <p><strong>Porcentagem de Lucro:</strong> <span id="porcentagemLucro">0.00</span>%</p>
+                <p><strong>Status:</strong> <span id="statusLucro" class="status-button"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
