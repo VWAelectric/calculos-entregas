@@ -47,3 +47,5 @@ Adicionar um campo para gastos adicionais (taxas da plataforma, manutenção, et
 Implementar um histórico de corridas para acompanhar os ganhos diários ou semanais.
 
 Salvar os dados do veículo (km/L e preço do combustível) no navegador para não precisar preenchê-los a cada uso.
+
+https://vwaelectric.github.io/calculos-entregas/
