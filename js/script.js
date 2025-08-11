@@ -56,8 +56,9 @@ function calcular() {
         document.getElementById('lucroLiquido').style.color = '#dc3545';
         document.getElementById('porcentagemLucro').style.color = '#dc3545';
     }
-    
+
     // NOVO: Atualiza a tabela de histórico com os dados da última consulta
+    document.getElementById('histValorEntrega').textContent = valorEntrega.toFixed(2);
     document.getElementById('histKmBusca').textContent = kmBusca.toFixed(2);
     document.getElementById('histKmEntrega').textContent = kmEntrega.toFixed(2);
     document.getElementById('histKmTotal').textContent = kmTotal.toFixed(2);
@@ -76,7 +77,7 @@ function calcular() {
 }
 
 // Este bloco foi movido para fora da função 'calcular()'
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
         event.preventDefault(); // Impede o comportamento padrão do "Enter" (enviar formulário)
         calcular();
