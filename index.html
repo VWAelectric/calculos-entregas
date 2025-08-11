@@ -51,11 +51,32 @@
                 <p><strong>Lucro Líquido:</strong> R$ <span id="lucroLiquido">0.00</span></p>
                 <p><strong>Porcentagem de Lucro:</strong> <span id="porcentagemLucro">0.00</span>%</p>
                 <p><strong>Status:</strong> <span id="statusLucro" class="status-button"></span></p>
+
+                <div id="historico" style="display: none;">
+                    <h3>Última Entrega</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Busca (km)</th>
+                                <th>Entrega (km)</th>
+                                <th>Total (km)</th>
+                                <th>Lucro Líquido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="histKmBusca">--</td>
+                                <td id="histKmEntrega">--</td>
+                                <td id="histKmTotal">--</td>
+                                <td id="histLucro">--</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="./js/script.js"></script>
+        <script src="./js/script.js"></script>
 </body>
 
 </html>

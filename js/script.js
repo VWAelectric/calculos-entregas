@@ -56,20 +56,29 @@ function calcular() {
         document.getElementById('lucroLiquido').style.color = '#dc3545';
         document.getElementById('porcentagemLucro').style.color = '#dc3545';
     }
+    
+    // NOVO: Atualiza a tabela de histórico com os dados da última consulta
+    document.getElementById('histKmBusca').textContent = kmBusca.toFixed(2);
+    document.getElementById('histKmEntrega').textContent = kmEntrega.toFixed(2);
+    document.getElementById('histKmTotal').textContent = kmTotal.toFixed(2);
+    document.getElementById('histLucro').textContent = lucroLiquido.toFixed(2);
 
-    // NOVO: Limpa os campos de entrada específicos da entrega
+    // NOVO: Exibe a tabela de histórico (caso esteja escondida)
+    document.getElementById('historico').style.display = 'block';
+
+    // Limpa os campos de entrada específicos da entrega
     document.getElementById('valorEntrega').value = '';
     document.getElementById('kmBusca').value = '';
     document.getElementById('kmEntrega').value = '';
 
     // Opcional: Coloca o cursor de volta no primeiro campo para facilitar a digitação
     document.getElementById('kmBusca').focus();
-
 }
 
-   document.addEventListener('keydown', function(event) {
+// Este bloco foi movido para fora da função 'calcular()'
+document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-        event.preventDefault(); // Impede o comportamento padrão do "Enter" em formulários (recarregar a página)
+        event.preventDefault(); // Impede o comportamento padrão do "Enter" (enviar formulário)
         calcular();
     }
 });
